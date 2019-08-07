@@ -61,37 +61,24 @@
 
     <div class="container">
 
-        <h1 class="text-center pt-3">Blog</h1>
+        <h1 class="text-center pt-3">{{ blog.title }}</h1>
 
         <br/>
 
         <br/>
-
-        <h1>Ultimele postari</h1>
-
-                <br/>
-
-        <br/>
-
-
-        {% for blog in blog.all %}
 
         <div class="card mb-3">
             <img width="50%" height="200" src="{{ blog.image.url }}" class="card-img-top">
             <div class="card-body">
-               <a href="{% url 'detail' blog.id %}"> <h5 class="card-title">{{ blog.title }}</h5></a>
-                <p class="card-text">{{ blog.summary }}</p>
+               <h5 class="card-title">{{ blog.title }}</h5></a>
+                <p class="card-text">{{ blog.body}}</p>
             </div>
         </div>
         <br/>
 
         <br/>
 
-        <br/>
 
-        <br/>
-
-        {% endfor %}
 
         <hr/>
     </div>
